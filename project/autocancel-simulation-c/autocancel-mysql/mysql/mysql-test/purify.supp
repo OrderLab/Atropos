@@ -1,0 +1,34 @@
+# Copyright (C) 2005, 2007 MySQL AB
+# Use is subject to license terms
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License, version 2.0,
+# as published by the Free Software Foundation.
+#
+# This program is also distributed with certain software (including
+# but not limited to OpenSSL) that is licensed under separate terms,
+# as designated in a particular file or component or in included license
+# documentation.  The authors of MySQL hereby grant you an additional
+# permission to link the program and your derivative works with the
+# separately licensed software that they have included with MySQL.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License, version 2.0, for more details.
+#
+# You should have received a copy of the GNU Library General Public
+# License along with this library; if not, write to the Free
+# Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+# MA 02110-1301, USA
+
+suppress UMR rw_read_held; mi_open; ha_myisam::open64; handler::ha_open; openfrm
+suppress UMR my_end; main
+suppress UMR _doprnt; fprintf; my_end; main
+suppress umr rw_read_held; mi_open
+suppress umr _putmsg; putmsg; _tx_sndudata
+suppress umr rw_read_held; Query_cache::store_query(THD*,st_table_list*); mysql_execute_command(THD*)
+suppress sig ...; _select; select; handle_connections_sockets; main; _start
+suppress sig ...; read; vio_read; my_real_read(st_net*,unsigned long*); my_net_read; do_command(THD*)
+suppress sig ...; read; vio_read; my_real_read(st_net*,unsigned long*); my_net_read; net_safe_read
+suppress sig ...; write; vio_write; net_real_write; net_write_buff(st_net*,const char*,unsigned long); my_net_write

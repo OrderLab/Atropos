@@ -1,0 +1,445 @@
+'\" t
+.\"     Title: \fBmysqlaccess\fR
+.\"    Author: [FIXME: author] [see http://docbook.sf.net/el/author]
+.\" Generator: DocBook XSL Stylesheets v1.79.1 <http://docbook.sf.net/>
+.\"      Date: 01/04/2021
+.\"    Manual: MySQL Database System
+.\"    Source: MySQL 5.6
+.\"  Language: English
+.\"
+.TH "\FBMYSQLACCESS\FR" "1" "01/04/2021" "MySQL 5\&.6" "MySQL Database System"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+mysqlaccess \- client for checking access privileges
+.SH "SYNOPSIS"
+.HP \w'\fBmysqlaccess\ [\fR\fB\fIhost_name\fR\fR\fB\ [\fR\fB\fIuser_name\fR\fR\fB\ [\fR\fB\fIdb_name\fR\fR\fB]]]\ [\fR\fB\fIoptions\fR\fR\fB]\fR\ 'u
+\fBmysqlaccess [\fR\fB\fIhost_name\fR\fR\fB [\fR\fB\fIuser_name\fR\fR\fB [\fR\fB\fIdb_name\fR\fR\fB]]] [\fR\fB\fIoptions\fR\fR\fB]\fR
+.SH "DESCRIPTION"
+.if n \{\
+.sp
+.\}
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBNote\fR
+.ps -1
+.br
+.PP
+This utility is deprecated in MySQL 5\&.6\&.17 and removed in MySQL 5\&.7
+.sp .5v
+.RE
+.PP
+\fBmysqlaccess\fR
+is a diagnostic tool that Yves Carlier has provided for the MySQL distribution\&. It checks the access privileges for a host name, user name, and database combination\&.
+\fBmysqlaccess\fR
+checks access using only the
+user
+and
+db
+tables\&. It does not check table, column, or routine privileges specified in the
+tables_priv,
+columns_priv, or
+procs_priv
+tables\&.
+.PP
+Invoke
+\fBmysqlaccess\fR
+like this:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+shell> \fBmysqlaccess [\fR\fB\fIhost_name\fR\fR\fB [\fR\fB\fIuser_name\fR\fR\fB [\fR\fB\fIdb_name\fR\fR\fB]]] [\fR\fB\fIoptions\fR\fR\fB]\fR
+.fi
+.if n \{\
+.RE
+.\}
+.PP
+When
+\fBmysqlaccess\fR
+runs, it loads and executes the contents of its configuration file,
+mysqlaccess\&.conf\&.
+\fBmysqlaccess\fR
+looks for the configuration file in these locations, in order:
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+The directory named by the
+\fBSYSCONFDIR\fR
+option to
+\fBCMake\fR
+when MySQL was built\&. By default, this is the
+etc
+directory located under the compiled\-in installation directory\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+The
+/etc
+directory\&.
+.RE
+.PP
+\fBmysqlaccess\fR
+supports the options shown in the following table\&.
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-help\fR,
+\fB\-?\fR
+Display a help message and exit\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-brief\fR,
+\fB\-b\fR
+Generate reports in single\-line tabular format\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-commit\fR
+Copy the new access privileges from the temporary tables to the original grant tables\&. The grant tables must be flushed for the new privileges to take effect\&. (For example, execute a
+\fBmysqladmin reload\fR
+command\&.)
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-copy\fR
+Reload the temporary grant tables from original ones\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-db=\fR\fB\fIdb_name\fR\fR,
+\fB\-d \fR\fB\fIdb_name\fR\fR
+Specify the database name\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-debug=\fR\fB\fIN\fR\fR
+Specify the debug level\&.
+\fIN\fR
+can be an integer from 0 to 3\&.
+.sp
+This option is available only if MySQL was built using
+\fBWITH_DEBUG\fR\&. MySQL release binaries provided by Oracle are
+\fInot\fR
+built using this option\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-host=\fR\fB\fIhost_name\fR\fR,
+\fB\-h \fR\fB\fIhost_name\fR\fR
+The host name to use in the access privileges\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-howto\fR
+Display some examples that show how to use
+\fBmysqlaccess\fR\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-old_server\fR
+Assume that the server is an old MySQL server (before MySQL 3\&.21) that does not yet know how to handle full
+WHERE
+clauses\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-password[=\fR\fB\fIpassword\fR\fR\fB]\fR,
+\fB\-p[\fR\fB\fIpassword\fR\fR\fB]\fR
+The password to use when connecting to the server\&. If you omit the
+\fIpassword\fR
+value following the
+\fB\-\-password\fR
+or
+\fB\-p\fR
+option on the command line,
+\fBmysqlaccess\fR
+prompts for one\&.
+.sp
+Specifying a password on the command line should be considered insecure\&. See
+Section\ \&6.1.2.1, \(lqEnd-User Guidelines for Password Security\(rq\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-plan\fR
+Display suggestions and ideas for future releases\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-preview\fR
+Show the privilege differences after making changes to the temporary grant tables\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-relnotes\fR
+Display the release notes\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-rhost=\fR\fB\fIhost_name\fR\fR,
+\fB\-H \fR\fB\fIhost_name\fR\fR
+Connect to the MySQL server on the given host\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-rollback\fR
+Undo the most recent changes to the temporary grant tables\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-spassword[=\fR\fB\fIpassword\fR\fR\fB]\fR,
+\fB\-P[\fR\fB\fIpassword\fR\fR\fB]\fR
+The password to use when connecting to the server as the superuser\&. If you omit the
+\fIpassword\fR
+value following the
+\fB\-\-spassword\fR
+or
+\fB\-p\fR
+option on the command line,
+\fBmysqlaccess\fR
+prompts for one\&.
+.sp
+Specifying a password on the command line should be considered insecure\&. See
+Section\ \&6.1.2.1, \(lqEnd-User Guidelines for Password Security\(rq\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-superuser=\fR\fB\fIuser_name\fR\fR,
+\fB\-U \fR\fB\fIuser_name\fR\fR
+Specify the user name for connecting as the superuser\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-table\fR,
+\fB\-t\fR
+Generate reports in table format\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-user=\fR\fB\fIuser_name\fR\fR,
+\fB\-u \fR\fB\fIuser_name\fR\fR
+The user name to use in the access privileges\&.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+\fB\-\-version\fR,
+\fB\-v\fR
+Display version information and exit\&.
+.RE
+.PP
+If your MySQL distribution is installed in some nonstandard location, you must change the location where
+\fBmysqlaccess\fR
+expects to find the
+\fBmysql\fR
+client\&. Edit the
+mysqlaccess
+script at approximately line 18\&. Search for a line that looks like this:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$MYSQL     = \*(Aq/usr/local/bin/mysql\*(Aq;    # path to mysql executable
+.fi
+.if n \{\
+.RE
+.\}
+.PP
+Change the path to reflect the location where
+\fBmysql\fR
+actually is stored on your system\&. If you do not do this, a
+Broken pipe
+error occurs when you run
+\fBmysqlaccess\fR\&.
+.SH "COPYRIGHT"
+.br
+.PP
+Copyright \(co 1997, 2021, Oracle and/or its affiliates.
+.PP
+This documentation is free software; you can redistribute it and/or modify it only under the terms of the GNU General Public License as published by the Free Software Foundation; version 2 of the License.
+.PP
+This documentation is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+.PP
+You should have received a copy of the GNU General Public License along with the program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA or see http://www.gnu.org/licenses/.
+.sp
+.SH "SEE ALSO"
+For more information, please refer to the MySQL Reference Manual,
+which may already be installed locally and which is also available
+online at http://dev.mysql.com/doc/.
+.SH AUTHOR
+Oracle Corporation (http://dev.mysql.com/).
