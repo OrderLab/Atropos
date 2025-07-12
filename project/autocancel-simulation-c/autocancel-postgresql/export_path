@@ -1,0 +1,5 @@
+export PGDATA=/home/catbeat/postgresql-14.0/dist/data/
+export PGHOME=/home/catbeat/postgresql-14.0/dist/
+export PATH=/home/catbeat/postgresql-14.0/dist/bin/:$PATH
+
+remember to revise src/makefile.global and remove O2
