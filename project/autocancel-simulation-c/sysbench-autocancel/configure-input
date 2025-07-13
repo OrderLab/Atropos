@@ -1,0 +1,1 @@
+./configure --prefix=/home/zeyin/sysbench-autocancel/dist/ --with-mysql-includes=/home/zeyin/autocancel-mysql/dist/include/ --with-mysql-libs=/home/zeyin/autocancel-mysql/dist/lib/ --with-mysql --with-pgsql --with-pgsql-includes=/home/zeyin/autocancel-postgresql/dist/include/ --with-pgsql-libs=/home/zeyin/autocancel-postgresql/dist/lib/

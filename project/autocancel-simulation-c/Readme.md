@@ -60,3 +60,13 @@ mkdir ./dist/data
 cd autocancel-apache
 ./compile.sh
 ```
+
+### Build Sysbench
+
+```shell
+sudo apt-get install make automake libtool pkg-config libaio-dev libmysqlclient-dev libssl-dev libpq-dev
+./autogen.sh
+./configure --prefix=$SYSBENCH_HOME/dist --with-mysql-includes=$MYSQL_HOME/dist/include/ --with-mysql-libs=$MYSQL_HOME/dist/lib/ --with-mysql --with-pgsql --with-pgsql-includes=$PGSQL_HOME/dist/include/ --with-pgsql-libs=$PGSQL_HOME/dist/lib/
+make -j
+make install
+```
