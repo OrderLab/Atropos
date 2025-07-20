@@ -1,0 +1,3 @@
+[submodule "project/autocancel-simulation-java"]
+	path = project/autocancel-simulation-java
+	url = git@github.com:easonycliu/AutoCancelProject.git
