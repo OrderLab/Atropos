@@ -1,3 +1,4 @@
 [submodule "project/atropos-java"]
 	path = project/atropos-java
 	url = git@github.com:easonycliu/AutoCancelProject.git
+	branch = master
