@@ -1,11 +1,15 @@
-# Autocancel C Language
+# Atropos**Note: If you chose to use our pre-configured machine, you can skip the build instructions below.**
 
-This directory contains the source code for **Autocancel-C**, along with three  applications implemented in C: **MySQL**, **PostgreSQL**, and **Apache**. These applications are modified to integrate with Autocancel for demonstrating its effectiveness. It also contains code for **sysbench** which is used to generate workloads.
+Follow the instructions below to build autocancel, MySQL, PostgreSQL, Apache and sysbench.+
 
-We will walk through the setup of each application, autocancel and sysbench. And we will show example usage of autocancel with resource overload cases from MySQL and PostgresSQL.
+This directory contains the C++ version of **Atropos**, along with three applications implemented in C: **MySQL**, **PostgreSQL**, and **Apache**. These applications are modified to integrate with Atropos for demonstrating its effectiveness. It also contains code for **sysbench** which is used to generate workloads.
+
+We will walk through the setup of each application, autocancel and sysbench. And we will show example usage of Atropos with resource overload cases from MySQL and PostgreSQL.
 
 
 ## Build Instructions
+
+**Note: If you chose to use our pre-configured machine, you can skip the build instructions below.**
 
 Follow the instructions below to build autocancel, MySQL, PostgresSQL, Apache and sysbench. 
 
@@ -26,7 +30,7 @@ export LD_LIBRARY_PATH=$(pwd)/autocancel-simulation/build/libs:$LD_LIBRARY_PATH
 ### Build MySQL
 
 ```shell
-# You may need to install extra package based on environment
+# You may need to install extra packages based on environment
 sudo apt update
 sudo apt install -y build-essential cmake libncurses5-dev libaio-dev \
   bison zlib1g-dev libtirpc-dev libevent-dev openssl pkg-config \
@@ -41,7 +45,7 @@ export LD_LIBRARY_PATH=$(pwd)/dist/lib:$LD_LIBRARY_PATH
 Revise `./autocancel-postgresql/configure` to adjust `AUTOCANCELDIR` path to be the path that contains `autocancel-simulation`.
 
 ```shell
-# You may need to install extra package based on environment
+# You may need to install extra packages based on environment
 sudo apt update
 sudo apt install -y build-essential libreadline-dev zlib1g-dev flex bison \
   libssl-dev libxml2-dev libxslt1-dev libpam0g-dev libedit-dev
@@ -101,7 +105,7 @@ touch /tmp/globLockMapRWLock
 
 ### MySQL Backup Lock Case
 
-Below shows how to run MySQL with autocancel to mitigate resource overload for the backup lock case (case c1 in Table 2 of the paper), where a subtle interaction causes backup queries to hold write locks for long time.
+Below shows how to run MySQL with autocancel to mitigate resource overload for the backup lock case (case c1 in Table 2 of the paper), where a subtle interaction causes backup queries to hold write locks for a long time.
 
 Navigate to `cases/mysql-cases/flush-case`.
 
@@ -231,12 +235,12 @@ Latency (ms):
 ```         
 
 
-### PostgresSQL Table Lock Case
+### PostgreSQL Table Lock Case
 
-Below shows how to run PostgresSQL with autocancel to mitigate resource overload for the table lock case (case c6 in Table 2 of the paper), where a write operation slows down the other query due to MVCC.
+Below shows how to run PostgreSQL with autocancel to mitigate resource overload for the table lock case (case c6 in Table 2 of the paper), where a write operation slows down the other query due to MVCC.
 
 #### Prepare PostgreSQL Original
-The sysbench workload also needs to run on a prepared PostgreSQL environment. The PostgreSQL we've modified has known issues in bootstrapping, so we need to setup PostgresSQL original repo instead. We use version 14.0.
+The sysbench workload also needs to run on a prepared PostgreSQL environment. The PostgreSQL we've modified has known issues in bootstrapping, so we need to setup PostgreSQL original repo instead. We use version 14.0.
 
 ```
 git clone https://github.com/postgres/postgres
