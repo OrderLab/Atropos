@@ -50,11 +50,11 @@ The artifact is organized into the following main components:
   - `atropos-postgresql/` - Modified PostgreSQL database with Atropos support
   - `sysbench-atropos/` - Sysbench for performance evaluation
 
-- `project/atropos-java/` - Java-based implementation and benchmarks (submodule with nested submodules)
-  - `atropos_java_code/` - Java Atropos library (nested submodule)
-  - `atropos_exp/` - Experimental evaluation code (nested submodule)
-  - `elasticsearch/` - Elasticsearch integration and benchmarks (nested submodule)
-  - `solr/` - Apache Solr integration and benchmarks (nested submodule)
+- `project/atropos-java/` - Java-based implementation and benchmarks
+  - `atropos_java_code/` - Java Atropos library
+  - `atropos_exp/` - Experimental evaluation code
+  - `elasticsearch/` - Elasticsearch integration and benchmarks
+  - `solr/` - Apache Solr integration and benchmarks
   - `scripts/` - Utility scripts for experiments and evaluation
 
 Each component includes its own build instructions and documentation. Refer to the individual README files in each directory for specific setup and usage instructions.
@@ -79,7 +79,7 @@ Before proceeding with the experiments, ensure you have the following installed:
 
 ## Experiments
 
-**[Java Experiments Setup & Execution Guide](project/atropos-java/README.md)**
+**[Java Experiments Setup & Execution Guide](https://github.com/easonycliu/AutoCancelProject/blob/master/README.md)**
 
 
 ## Citation
