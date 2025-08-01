@@ -69,6 +69,21 @@ Before proceeding with the experiments, ensure you have the following installed:
   - PostgreSQL development libraries
   - Apache HTTP Server development headers
 
+### Important Note on Hardware and Performance Dependencies
+
+The resource overload cases and bug reproduction are highly dependent on specific hardware and software configurations. Performance characteristics vary significantly across different machines, which affects the timing and conditions required to trigger the resource overload scenarios.
+
+**If you are using your own machine (not our pre-configured environment):**
+- You will need to fine-tune the bug reproduction scripts located in the `cases/` folder
+- Scripts may require adjustment of timing parameters, workload intensities, or resource thresholds
+- After you successfully trigger the resource overload condition, you can follow our instructions to run Atropos
+
+**Pre-tuned Machine Configurations:**
+We have successfully tuned and tested the reproduction scripts on the following machine configurations:
+- **[Available Machines](https://github.com/OrderLab/Atropos/tree/main/project/machines.md)**
+
+For the most reliable evaluation experience, we recommend using our pre-configured evaluation environment.
+
 ## Experiments
 
 **[C Experiments Setup & Execution Guide](https://github.com/OrderLab/Atropos/tree/main/project/atropos-c)**
