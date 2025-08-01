@@ -1,4 +1,4 @@
-# Atropos
+# Atropos in C++
 
 This directory contains the C++ version of **Atropos**, along with three applications implemented in C: **MySQL**, **PostgreSQL**, and **Apache**. These applications are modified to integrate with Atropos for demonstrating its effectiveness. It also contains code for **sysbench** which is used to generate workloads.
 
