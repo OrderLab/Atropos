@@ -1,14 +1,12 @@
-# Atropos: A Library for Mitigating Application Resource Overload
+# Artifact Evaluation Guide
 
-**SOSP'25 Artifact**
+Welcome to the artifact evaluation guide for Atropos (SOSP'25). This document outlines the procedures needed to reproduce our results and guides you through the key experiments presented in the paper.
 
 ## Overview
 
 Atropos is an overload control system designed to manage application resource overload by proactively canceling tasks responsible for monopolizing critical resources. It achieves this by continuously monitoring resource usage, identifying tasks causing significant resource contention, and selectively canceling them to maintain performance targets. Atropos provides unified abstractions to manage diverse application resources and leverages existing cancellation mechanisms in applications to safely kill problematic requests. 
 
-## Artifact Evaluation Guide
 
-Welcome to the artifact evaluation guide for Atropos (SOSP'25). This document outlines the procedures needed to reproduce our results and guides you through the key experiments presented in the paper.
 
 ## Getting Started
 
@@ -39,29 +37,6 @@ To pull the latest changes from all submodules:
 ```bash
 git submodule update --remote
 ```
-
-### Troubleshooting Submodules
-
-If you encounter issues with empty submodule directories (especially nested submodules in the Java component):
-
-1. **Check submodule status**:
-   ```bash
-   git submodule status --recursive
-   ```
-
-2. **Force reinitialize all submodules**:
-   ```bash
-   git submodule deinit --all -f
-   git submodule update --init --recursive
-   ```
-
-3. **If nested submodules are still empty**, navigate to the submodule and initialize manually:
-   ```bash
-   cd project/atropos-java
-   git submodule update --init --recursive
-   ```
-
-**Note**: The Java submodule (`project/atropos-java/`) contains multiple nested submodules. Ensure all are properly initialized using the `--recursive` flag.
 
 ## Project Structure
 
@@ -102,37 +77,10 @@ Before proceeding with the experiments, ensure you have the following installed:
   - PostgreSQL development libraries
   - Apache HTTP Server development headers
 
-## Quick Start
+## Experiments
 
-1. **Clone and setup**:
-   ```bash
-   git clone --recurse-submodules git@github.com:OrderLab/Atropos.git
-   cd Atropos
-   ```
+**[Java Experiments Setup & Execution Guide](project/atropos-java/README.md)**
 
-2. **Build core library**:
-   ```bash
-   cd project/atropos-c/atropos
-   mkdir build && cd build
-   cmake ..
-   make -j $(nproc)
-   ```
-
-3. **Verify Java components**:
-   ```bash
-   cd project/atropos-java/atropos_java_code
-   ./gradlew build
-   ```
-
-## Evaluation Overview
-
-The artifact supports reproducing the key results from our SOSP'25 paper:
-
-- **Figure X**: Performance comparison under resource overload
-- **Figure Y**: Cancellation effectiveness across different workloads  
-- **Table Z**: System integration overhead analysis
-
-Detailed instructions for each experiment are provided in the respective component directories.
 
 ## Citation
 
