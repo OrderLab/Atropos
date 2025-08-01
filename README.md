@@ -1,20 +1,18 @@
-**Artifact for the Atropos Work**
+# Atropos: A Library for Mitigating Application Resource Overload
 
+**SOSP'25 Artifact**
 
-## About This Artifact
+## Overview
 
-This artifact includes:
-- **C/C++ Implementation**: Core Atropos library and system integrations (`project/atropos-c/`)
-- **Java Implementation**: Java-based simulation and benchmarks (`project/atropos-java/`)
-- **Database Integration**: Modified versions of MySQL and PostgreSQL with Atropos support
-- **Web Server Integration**: Modified Apache HTTP Server with Atropos support
-- **Benchmarking Tools**: Sysbench integration and search engine benchmarks (Elasticsearch, Solr)
+Atropos is an overload control system designed to manage application resource overload by proactively canceling tasks responsible for monopolizing critical resources. It achieves this by continuously monitoring resource usage, identifying tasks causing significant resource contention, and selectively canceling them to maintain performance targets. Atropos provides unified abstractions to manage diverse application resources and leverages existing cancellation mechanisms in applications to safely kill problematic requests. 
+
+## Artifact Evaluation Guide
+
+Welcome to the artifact evaluation guide for Atropos (SOSP'25). This document outlines the procedures needed to reproduce our results and guides you through the key experiments presented in the paper.
 
 ## Getting Started
 
 ### Cloning the Repository
-
-This repository contains submodules. To properly clone the repository with all submodules, use one of the following methods:
 
 #### Option 1: Clone with submodules in one command
 ```bash
@@ -86,15 +84,77 @@ The artifact is organized into the following main components:
 
 Each component includes its own build instructions and documentation. Refer to the individual README files in each directory for specific setup and usage instructions.
 
+## Prerequisites
+
+Before proceeding with the experiments, ensure you have the following installed:
+
+- **Operating System**: Linux (Ubuntu 18.04+ recommended) or macOS
+- **Languages & Runtimes**:
+  - GCC/Clang (for C/C++ components)
+  - Java 8+ (for Java components)
+  - Python 3.6+ (for scripts and utilities)
+- **Build Tools**:
+  - CMake 3.10+
+  - Make
+  - Maven or Gradle (for Java builds)
+- **Dependencies**:
+  - MySQL development libraries
+  - PostgreSQL development libraries
+  - Apache HTTP Server development headers
+
+## Quick Start
+
+1. **Clone and setup**:
+   ```bash
+   git clone --recurse-submodules git@github.com:OrderLab/Atropos.git
+   cd Atropos
+   ```
+
+2. **Build core library**:
+   ```bash
+   cd project/atropos-c/atropos
+   mkdir build && cd build
+   cmake ..
+   make -j $(nproc)
+   ```
+
+3. **Verify Java components**:
+   ```bash
+   cd project/atropos-java/atropos_java_code
+   ./gradlew build
+   ```
+
+## Evaluation Overview
+
+The artifact supports reproducing the key results from our SOSP'25 paper:
+
+- **Figure X**: Performance comparison under resource overload
+- **Figure Y**: Cancellation effectiveness across different workloads  
+- **Table Z**: System integration overhead analysis
+
+Detailed instructions for each experiment are provided in the respective component directories.
+
 ## Citation
 
 If you use this artifact in your research, please cite our paper:
 
 ```bibtex
 @inproceedings{atropos2025,
-  title={Atropos: Autocancellation for Improved System Performance},
+  title={Atropos: A Library for Mitigating Application Resource Overload},
   author={[Authors]},
-  booktitle={Proceedings of the ACM SIGOPS 30th Symposium on Operating Systems Principles},
-  year={2025}
+  booktitle={Proceedings of the 30th ACM Symposium on Operating Systems Principles},
+  series={SOSP '25},
+  year={2025},
+  publisher={ACM}
 }
 ```
+
+## Contact
+
+For questions about this artifact or the paper, please contact:
+- [Author names and emails to be added]
+- Open an issue in this repository for technical problems
+
+## License
+
+This project is licensed under [License to be specified]. See individual component directories for specific licensing information.
