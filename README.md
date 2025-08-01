@@ -12,16 +12,8 @@ Atropos is an overload control system designed to manage application resource ov
 
 ### Cloning the Repository
 
-#### Option 1: Clone with submodules in one command
 ```bash
 git clone --recurse-submodules git@github.com:OrderLab/Atropos.git
-```
-
-#### Option 2: Clone first, then initialize submodules
-```bash
-git clone git@github.com:OrderLab/Atropos.git
-cd Atropos
-git submodule update --init --recursive
 ```
 
 ### Updating Submodules
