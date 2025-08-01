@@ -1,0 +1,28 @@
+sysbench 1.1.0-f698960 (using bundled LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 16
+Report intermediate results every 1.000000 second(s)
+Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+Threads started!
+
+[ 1.0s ] thds: 16 tps: 2112.08 qps: 38199.84 (r/w/o: 29732.57/4226.16/4241.11) lat (ms,95%): 9.73 err/s: 0.00 reconn/s: 0.00
+[ 2.0s ] thds: 16 tps: 1552.48 qps: 28017.49 (r/w/o: 21780.64/3132.89/3103.97) lat (ms,95%): 27.17 err/s: 0.00 reconn/s: 0.00
+[ 3.0s ] thds: 16 tps: 1935.39 qps: 34853.02 (r/w/o: 27109.47/3872.78/3870.78) lat (ms,95%): 17.32 err/s: 0.00 reconn/s: 0.00
+[ 4.0s ] thds: 16 tps: 2057.15 qps: 36930.65 (r/w/o: 28733.07/4084.27/4113.30) lat (ms,95%): 13.70 err/s: 0.00 reconn/s: 0.00
+[ 5.0s ] thds: 16 tps: 2286.85 qps: 41258.20 (r/w/o: 32081.83/4601.67/4574.70) lat (ms,95%): 8.43 err/s: 0.00 reconn/s: 0.00
+[ 6.0s ] thds: 16 tps: 1666.21 qps: 29956.94 (r/w/o: 23312.03/3312.47/3332.43) lat (ms,95%): 27.17 err/s: 0.00 reconn/s: 0.00
+[ 7.0s ] thds: 16 tps: 1989.96 qps: 35812.35 (r/w/o: 27852.50/3979.93/3979.93) lat (ms,95%): 24.38 err/s: 0.00 reconn/s: 0.00
+[ 8.0s ] thds: 16 tps: 1970.51 qps: 35504.32 (r/w/o: 27604.22/3959.07/3941.03) lat (ms,95%): 9.22 err/s: 0.00 reconn/s: 0.00
+[ 9.0s ] thds: 16 tps: 2075.64 qps: 37365.45 (r/w/o: 29060.91/4153.27/4151.27) lat (ms,95%): 9.06 err/s: 0.00 reconn/s: 0.00
+[ 10.0s ] thds: 16 tps: 1624.33 qps: 29226.91 (r/w/o: 22730.60/3248.66/3247.66) lat (ms,95%): 24.83 err/s: 0.00 reconn/s: 0.00
+[ 11.0s ] thds: 16 tps: 2207.99 qps: 39760.73 (r/w/o: 30925.78/4417.97/4416.97) lat (ms,95%): 8.58 err/s: 0.00 reconn/s: 0.00
+[ 12.0s ] thds: 16 tps: 1648.13 qps: 29455.24 (r/w/o: 22894.74/3264.25/3296.25) lat (ms,95%): 23.95 err/s: 0.00 reconn/s: 0.00
+[ 13.0s ] thds: 16 tps: 2161.15 qps: 38929.73 (r/w/o: 30284.13/4323.30/4322.30) lat (ms,95%): 8.58 err/s: 0.00 reconn/s: 0.00
+[ 14.0s ] thds: 16 tps: 1614.08 qps: 29181.68 (r/w/o: 22704.32/3251.20/3226.17) lat (ms,95%): 25.28 err/s: 0.00 reconn/s: 0.00
+[ 15.0s ] thds: 16 tps: 2272.02 qps: 40931.31 (r/w/o: 31838.24/4548.03/4545.04) lat (ms,95%): 8.43 err/s: 0.00 reconn/s: 0.00
+[ 16.0s ] thds: 16 tps: 1660.94 qps: 29909.88 (r/w/o: 23263.13/3323.88/3322.88) lat (ms,95%): 21.11 err/s: 0.00 reconn/s: 0.00
