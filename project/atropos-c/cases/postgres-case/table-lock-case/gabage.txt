@@ -1,0 +1,469 @@
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS2 => MASK 0x3ff
+Allocation configuration altered.
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xffc00] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+Error parsing cpu list
+Error parsing cpu list
+Error parsing cpu list
+Error parsing cpu list
+Error parsing cpu list
+ERROR: WRMSR failed for reg[0xc93] <- value[0xffc00] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+Error parsing cpu list
+Error parsing cpu list
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS2 => MASK 0x3ff
+Allocation configuration altered.
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xffc00] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+Error parsing cpu list
+ERROR: WRMSR failed for reg[0xc93] <- value[0x7fc00] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS2 => MASK 0x7ff
+Allocation configuration altered.
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xff800] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xff800] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+Error parsing cpu list
+Error parsing cpu list
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS2 => MASK 0x7ff
+Allocation configuration altered.
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xff800] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+Error parsing cpu list
+ERROR: WRMSR failed for reg[0xc93] <- value[0xff800] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+Error parsing cpu list
+Error parsing cpu list
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS2 => MASK 0x7ff
+Allocation configuration altered.
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xff800] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+Error parsing cpu list
+ERROR: WRMSR failed for reg[0xc93] <- value[0x7f800] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS2 => MASK 0xfff
+Allocation configuration altered.
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xff000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xff000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+Error parsing cpu list
+Error parsing cpu list
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS2 => MASK 0xfff
+Allocation configuration altered.
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xff000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+Error parsing cpu list
+ERROR: WRMSR failed for reg[0xc93] <- value[0x7f000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc92] <- value[0x1fff] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS2 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xfe000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xfe000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+Error parsing cpu list
+Error parsing cpu list
+ERROR: WRMSR failed for reg[0xc92] <- value[0x1fff] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS2 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xfe000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+Error parsing cpu list
+ERROR: WRMSR failed for reg[0xc93] <- value[0x7e000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc92] <- value[0x3fff] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS2 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xfc000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0x7c000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc92] <- value[0x7fff] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS2 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xf8000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xf8000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+Error parsing cpu list
+Error parsing cpu list
+ERROR: WRMSR failed for reg[0xc92] <- value[0x7fff] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS2 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xf8000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+Error parsing cpu list
+ERROR: WRMSR failed for reg[0xc93] <- value[0xf8000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+Error parsing cpu list
+Error parsing cpu list
+ERROR: WRMSR failed for reg[0xc92] <- value[0x7fff] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS2 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xf8000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+Error parsing cpu list
+ERROR: WRMSR failed for reg[0xc93] <- value[0x78000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc92] <- value[0xffff] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS2 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xf0000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0x70000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc92] <- value[0x1ffff] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS2 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xe0000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0x60000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc92] <- value[0x3ffff] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS2 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0xc0000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0x40000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc92] <- value[0x7ffff] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS2 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!
+ERROR: WRMSR failed for reg[0xc93] <- value[0x80000] on lcore 0
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+SOCKET 0 L3CA COS3 - FAILED!
+Allocation configuration error!
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+Core number or class id is out of bounds!
+Allocation association error!

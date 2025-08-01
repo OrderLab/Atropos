@@ -1,0 +1,159 @@
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 4
+Target transaction rate: 300/sec
+Report intermediate results every 1 second(s)
+Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+Threads started!
+
+[ 1s ] thds: 4 tps: 309.24 qps: 6202.74 (r/w/o: 4343.32/1239.95/619.48) lat (ms,95%): 3.07 err/s: 0.00 reconn/s: 0.00
+[ 1s ] queue length: 0, concurrency: 0
+[ 2s ] thds: 4 tps: 318.07 qps: 6343.31 (r/w/o: 4438.92/1269.26/635.13) lat (ms,95%): 2.86 err/s: 0.00 reconn/s: 0.00
+[ 2s ] queue length: 0, concurrency: 0
+[ 3s ] thds: 4 tps: 294.00 qps: 5892.01 (r/w/o: 4127.01/1176.00/589.00) lat (ms,95%): 2.91 err/s: 0.00 reconn/s: 0.00
+[ 3s ] queue length: 0, concurrency: 1
+[ 4s ] thds: 4 tps: 300.00 qps: 5987.99 (r/w/o: 4188.99/1200.00/599.00) lat (ms,95%): 2.97 err/s: 0.00 reconn/s: 0.00
+[ 4s ] queue length: 0, concurrency: 2
+[ 5s ] thds: 4 tps: 334.00 qps: 6699.00 (r/w/o: 4690.00/1340.00/669.00) lat (ms,95%): 2.91 err/s: 0.00 reconn/s: 0.00
+[ 5s ] queue length: 0, concurrency: 1
+[ 6s ] thds: 4 tps: 242.00 qps: 4839.00 (r/w/o: 3388.00/967.00/484.00) lat (ms,95%): 2.91 err/s: 0.00 reconn/s: 0.00
+[ 6s ] queue length: 0, concurrency: 1
+[ 7s ] thds: 4 tps: 275.00 qps: 5500.99 (r/w/o: 3849.99/1101.00/550.00) lat (ms,95%): 3.02 err/s: 0.00 reconn/s: 0.00
+[ 7s ] queue length: 0, concurrency: 2
+[ 8s ] thds: 4 tps: 317.00 qps: 6321.01 (r/w/o: 4424.01/1264.00/633.00) lat (ms,95%): 3.13 err/s: 0.00 reconn/s: 0.00
+[ 8s ] queue length: 0, concurrency: 0
+[ 9s ] thds: 4 tps: 314.00 qps: 6280.00 (r/w/o: 4396.00/1256.00/628.00) lat (ms,95%): 3.13 err/s: 0.00 reconn/s: 0.00
+[ 9s ] queue length: 0, concurrency: 0
+[ 10s ] thds: 4 tps: 293.00 qps: 5872.99 (r/w/o: 4113.99/1172.00/587.00) lat (ms,95%): 3.02 err/s: 0.00 reconn/s: 0.00
+[ 10s ] queue length: 0, concurrency: 0
+[ 11s ] thds: 4 tps: 280.00 qps: 5597.00 (r/w/o: 3917.00/1120.00/560.00) lat (ms,95%): 3.13 err/s: 0.00 reconn/s: 0.00
+[ 11s ] queue length: 0, concurrency: 2
+[ 12s ] thds: 4 tps: 307.00 qps: 6130.02 (r/w/o: 4289.01/1228.00/613.00) lat (ms,95%): 3.02 err/s: 0.00 reconn/s: 0.00
+[ 12s ] queue length: 0, concurrency: 1
+[ 13s ] thds: 4 tps: 339.00 qps: 6784.99 (r/w/o: 4749.99/1356.00/679.00) lat (ms,95%): 3.02 err/s: 0.00 reconn/s: 0.00
+[ 13s ] queue length: 0, concurrency: 1
+[ 14s ] thds: 4 tps: 295.00 qps: 5895.01 (r/w/o: 4126.01/1180.00/589.00) lat (ms,95%): 3.25 err/s: 0.00 reconn/s: 0.00
+[ 14s ] queue length: 0, concurrency: 0
+[ 15s ] thds: 4 tps: 326.00 qps: 6519.99 (r/w/o: 4563.99/1304.00/652.00) lat (ms,95%): 3.02 err/s: 0.00 reconn/s: 0.00
+[ 15s ] queue length: 0, concurrency: 1
+[ 16s ] thds: 4 tps: 288.00 qps: 5759.99 (r/w/o: 4031.99/1152.00/576.00) lat (ms,95%): 4.25 err/s: 0.00 reconn/s: 0.00
+[ 16s ] queue length: 0, concurrency: 1
+[ 17s ] thds: 4 tps: 285.00 qps: 5715.96 (r/w/o: 4003.97/1140.99/571.00) lat (ms,95%): 3.43 err/s: 0.00 reconn/s: 0.00
+[ 17s ] queue length: 0, concurrency: 0
+[ 18s ] thds: 4 tps: 275.00 qps: 5496.04 (r/w/o: 3847.03/1099.01/550.00) lat (ms,95%): 3.36 err/s: 0.00 reconn/s: 0.00
+[ 18s ] queue length: 0, concurrency: 1
+[ 19s ] thds: 4 tps: 298.00 qps: 5948.00 (r/w/o: 4161.00/1192.00/595.00) lat (ms,95%): 4.10 err/s: 0.00 reconn/s: 0.00
+[ 19s ] queue length: 0, concurrency: 1
+[ 20s ] thds: 4 tps: 290.00 qps: 5799.97 (r/w/o: 4059.98/1159.99/580.00) lat (ms,95%): 2.97 err/s: 0.00 reconn/s: 0.00
+[ 20s ] queue length: 0, concurrency: 1
+[ 21s ] thds: 4 tps: 305.00 qps: 6113.99 (r/w/o: 4282.99/1220.00/611.00) lat (ms,95%): 3.75 err/s: 0.00 reconn/s: 0.00
+[ 21s ] queue length: 0, concurrency: 0
+[ 22s ] thds: 4 tps: 310.00 qps: 6195.00 (r/w/o: 4335.00/1240.00/620.00) lat (ms,95%): 3.68 err/s: 0.00 reconn/s: 0.00
+[ 22s ] queue length: 0, concurrency: 2
+[ 23s ] thds: 4 tps: 276.00 qps: 5511.02 (r/w/o: 3856.01/1104.00/551.00) lat (ms,95%): 3.75 err/s: 0.00 reconn/s: 0.00
+[ 23s ] queue length: 0, concurrency: 0
+[ 24s ] thds: 4 tps: 297.00 qps: 5939.98 (r/w/o: 4157.99/1188.00/594.00) lat (ms,95%): 3.43 err/s: 0.00 reconn/s: 0.00
+[ 24s ] queue length: 0, concurrency: 1
+[ 25s ] thds: 4 tps: 300.00 qps: 6004.02 (r/w/o: 4202.01/1200.00/602.00) lat (ms,95%): 3.96 err/s: 0.00 reconn/s: 0.00
+[ 25s ] queue length: 0, concurrency: 4
+[ 26s ] thds: 4 tps: 321.00 qps: 6429.99 (r/w/o: 4505.00/1284.00/641.00) lat (ms,95%): 4.25 err/s: 0.00 reconn/s: 0.00
+[ 26s ] queue length: 0, concurrency: 0
+[ 27s ] thds: 4 tps: 309.00 qps: 6166.00 (r/w/o: 4313.00/1236.00/617.00) lat (ms,95%): 4.03 err/s: 0.00 reconn/s: 0.00
+[ 27s ] queue length: 0, concurrency: 0
+[ 28s ] thds: 4 tps: 293.00 qps: 5914.99 (r/w/o: 4146.00/1179.00/590.00) lat (ms,95%): 3.49 err/s: 0.00 reconn/s: 0.00
+[ 28s ] queue length: 0, concurrency: 1
+[ 29s ] thds: 4 tps: 286.95 qps: 5683.93 (r/w/o: 3973.25/1140.78/569.89) lat (ms,95%): 3.82 err/s: 0.00 reconn/s: 0.00
+[ 29s ] queue length: 0, concurrency: 1
+[ 30s ] thds: 4 tps: 314.06 qps: 6294.20 (r/w/o: 4408.84/1256.24/629.12) lat (ms,95%): 3.19 err/s: 0.00 reconn/s: 0.00
+[ 30s ] queue length: 0, concurrency: 1
+[ 31s ] thds: 4 tps: 291.00 qps: 5807.00 (r/w/o: 4062.00/1164.00/581.00) lat (ms,95%): 3.82 err/s: 0.00 reconn/s: 0.00
+[ 31s ] queue length: 0, concurrency: 0
+[ 32s ] thds: 4 tps: 272.00 qps: 5439.99 (r/w/o: 3808.00/1088.00/544.00) lat (ms,95%): 3.96 err/s: 0.00 reconn/s: 0.00
+[ 32s ] queue length: 0, concurrency: 1
+[ 33s ] thds: 4 tps: 308.00 qps: 6173.00 (r/w/o: 4324.00/1232.00/617.00) lat (ms,95%): 3.62 err/s: 0.00 reconn/s: 0.00
+[ 33s ] queue length: 0, concurrency: 0
+[ 34s ] thds: 4 tps: 282.00 qps: 5648.01 (r/w/o: 3951.00/1131.00/566.00) lat (ms,95%): 3.89 err/s: 0.00 reconn/s: 0.00
+[ 34s ] queue length: 0, concurrency: 2
+[ 35s ] thds: 4 tps: 281.00 qps: 5643.02 (r/w/o: 3957.01/1124.00/562.00) lat (ms,95%): 2.97 err/s: 0.00 reconn/s: 0.00
+[ 35s ] queue length: 0, concurrency: 2
+[ 36s ] thds: 4 tps: 301.00 qps: 5989.00 (r/w/o: 4188.00/1201.00/600.00) lat (ms,95%): 3.36 err/s: 0.00 reconn/s: 0.00
+[ 36s ] queue length: 0, concurrency: 0
+[ 37s ] thds: 4 tps: 309.00 qps: 6178.00 (r/w/o: 4324.00/1236.00/618.00) lat (ms,95%): 3.96 err/s: 0.00 reconn/s: 0.00
+[ 37s ] queue length: 0, concurrency: 1
+[ 38s ] thds: 4 tps: 258.00 qps: 5154.01 (r/w/o: 3606.01/1032.00/516.00) lat (ms,95%): 3.43 err/s: 0.00 reconn/s: 0.00
+[ 38s ] queue length: 0, concurrency: 1
+[ 39s ] thds: 4 tps: 302.00 qps: 6075.99 (r/w/o: 4259.00/1211.00/606.00) lat (ms,95%): 3.19 err/s: 0.00 reconn/s: 0.00
+[ 39s ] queue length: 0, concurrency: 1
+[ 40s ] thds: 4 tps: 287.00 qps: 5699.00 (r/w/o: 3983.00/1145.00/571.00) lat (ms,95%): 3.25 err/s: 0.00 reconn/s: 0.00
+[ 40s ] queue length: 0, concurrency: 2
+[ 41s ] thds: 4 tps: 301.00 qps: 6043.98 (r/w/o: 4231.99/1208.00/604.00) lat (ms,95%): 3.55 err/s: 0.00 reconn/s: 0.00
+[ 41s ] queue length: 0, concurrency: 2
+[ 42s ] thds: 4 tps: 309.00 qps: 6156.98 (r/w/o: 4307.99/1232.00/617.00) lat (ms,95%): 3.62 err/s: 0.00 reconn/s: 0.00
+[ 42s ] queue length: 0, concurrency: 1
+[ 43s ] thds: 4 tps: 302.00 qps: 6053.02 (r/w/o: 4241.01/1208.00/604.00) lat (ms,95%): 3.49 err/s: 0.00 reconn/s: 0.00
+[ 43s ] queue length: 0, concurrency: 0
+[ 44s ] thds: 4 tps: 296.00 qps: 5941.02 (r/w/o: 4159.01/1189.00/593.00) lat (ms,95%): 3.55 err/s: 0.00 reconn/s: 0.00
+[ 44s ] queue length: 0, concurrency: 0
+[ 45s ] thds: 4 tps: 284.00 qps: 5655.97 (r/w/o: 3957.98/1130.99/567.00) lat (ms,95%): 3.89 err/s: 0.00 reconn/s: 0.00
+[ 45s ] queue length: 0, concurrency: 0
+[ 46s ] thds: 4 tps: 346.00 qps: 6920.02 (r/w/o: 4844.02/1384.00/692.00) lat (ms,95%): 3.55 err/s: 0.00 reconn/s: 0.00
+[ 46s ] queue length: 0, concurrency: 1
+[ 47s ] thds: 4 tps: 305.00 qps: 6089.01 (r/w/o: 4260.01/1220.00/609.00) lat (ms,95%): 4.33 err/s: 0.00 reconn/s: 0.00
+[ 47s ] queue length: 0, concurrency: 0
+[ 48s ] thds: 4 tps: 299.00 qps: 5979.99 (r/w/o: 4185.99/1196.00/598.00) lat (ms,95%): 3.75 err/s: 0.00 reconn/s: 0.00
+[ 48s ] queue length: 0, concurrency: 1
+[ 49s ] thds: 4 tps: 288.00 qps: 5779.01 (r/w/o: 4046.00/1156.00/577.00) lat (ms,95%): 4.65 err/s: 0.00 reconn/s: 0.00
+[ 49s ] queue length: 0, concurrency: 0
+[ 50s ] thds: 4 tps: 280.00 qps: 5601.00 (r/w/o: 3920.00/1120.00/561.00) lat (ms,95%): 4.03 err/s: 0.00 reconn/s: 0.00
+[ 50s ] queue length: 0, concurrency: 2
+[ 51s ] thds: 4 tps: 297.00 qps: 5957.99 (r/w/o: 4171.99/1192.00/594.00) lat (ms,95%): 3.68 err/s: 0.00 reconn/s: 0.00
+[ 51s ] queue length: 0, concurrency: 0
+[ 52s ] thds: 4 tps: 307.00 qps: 6115.99 (r/w/o: 4283.00/1220.00/613.00) lat (ms,95%): 3.36 err/s: 0.00 reconn/s: 0.00
+[ 52s ] queue length: 0, concurrency: 0
+[ 53s ] thds: 4 tps: 314.00 qps: 6281.01 (r/w/o: 4397.01/1256.00/628.00) lat (ms,95%): 4.03 err/s: 0.00 reconn/s: 0.00
+[ 53s ] queue length: 0, concurrency: 1
+[ 54s ] thds: 4 tps: 292.00 qps: 5844.00 (r/w/o: 4088.00/1172.00/584.00) lat (ms,95%): 3.55 err/s: 0.00 reconn/s: 0.00
+[ 54s ] queue length: 0, concurrency: 2
+[ 55s ] thds: 4 tps: 317.00 qps: 6339.97 (r/w/o: 4437.98/1267.99/634.00) lat (ms,95%): 3.75 err/s: 0.00 reconn/s: 0.00
+[ 55s ] queue length: 0, concurrency: 1
+[ 56s ] thds: 4 tps: 277.00 qps: 5553.02 (r/w/o: 3890.01/1108.00/555.00) lat (ms,95%): 4.41 err/s: 0.00 reconn/s: 0.00
+[ 56s ] queue length: 0, concurrency: 1
+[ 57s ] thds: 4 tps: 313.00 qps: 6238.01 (r/w/o: 4365.01/1248.00/625.00) lat (ms,95%): 3.30 err/s: 0.00 reconn/s: 0.00
+[ 57s ] queue length: 0, concurrency: 0
+[ 58s ] thds: 4 tps: 302.00 qps: 6029.98 (r/w/o: 4218.98/1208.00/603.00) lat (ms,95%): 3.82 err/s: 0.00 reconn/s: 0.00
+[ 58s ] queue length: 0, concurrency: 0
+[ 59s ] thds: 4 tps: 303.00 qps: 6077.02 (r/w/o: 4256.02/1214.00/607.00) lat (ms,95%): 3.68 err/s: 0.00 reconn/s: 0.00
+[ 59s ] queue length: 0, concurrency: 1
+[ 60s ] thds: 4 tps: 306.99 qps: 6158.88 (r/w/o: 4311.92/1231.98/614.99) lat (ms,95%): 3.68 err/s: 0.00 reconn/s: 0.00
+[ 60s ] queue length: 1, concurrency: 0
+SQL statistics:
+    queries performed:
+        read:                            250936
+        write:                           71696
+        other:                           35848
+        total:                           358480
+    transactions:                        17924  (298.69 per sec.)
+    queries:                             358480 (5973.90 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+General statistics:
+    total time:                          60.0056s
+    total number of events:              17924
+
+Latency (ms):
+         min:                                    2.32
+         avg:                                    2.70
+         max:                                    8.64
+         95th percentile:                        3.55
+         sum:                                48389.20
+
+Threads fairness:
+    events (avg/stddev):           4481.0000/6.12
+    execution time (avg/stddev):   12.0973/0.07
+
