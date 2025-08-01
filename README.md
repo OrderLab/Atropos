@@ -109,7 +109,7 @@ If you use this artifact in your research, please cite our paper:
 ## Contact
 
 For questions about this artifact or the paper, please contact:
-- [Author names and emails to be added]
+- yigongh@bu.edu
 - Open an issue in this repository for technical problems
 
 ## License
