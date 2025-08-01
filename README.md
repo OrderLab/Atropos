@@ -86,7 +86,7 @@ For the most reliable evaluation experience, we recommend using our pre-configur
 
 ## Experiments
 
-**[C Experiments Setup & Execution Guide](https://github.com/OrderLab/Atropos/blob/main/project/atropos-c/README.md)**
+**[C Experiments Setup & Execution Guide](https://github.com/OrderLab/Atropos/blob/main/project/atropos-c/Readme.md)**
 
 **[Java Experiments Setup & Execution Guide](https://github.com/easonycliu/AutoCancelProject/blob/master/README.md)**
 
