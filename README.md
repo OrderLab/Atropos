@@ -71,6 +71,8 @@ Before proceeding with the experiments, ensure you have the following installed:
 
 ## Experiments
 
+**[C Experiments Setup & Execution Guide](https://github.com/OrderLab/Atropos/tree/main/project/atropos-c)**
+
 **[Java Experiments Setup & Execution Guide](https://github.com/easonycliu/AutoCancelProject/blob/master/README.md)**
 
 
