@@ -16,7 +16,7 @@
 ## M4sh Initialization. ##
 ## -------------------- ##
 
-AUTOCANCELDIR=/home/cc/autocancel/autocancel-simulation
+AUTOCANCELDIR=/home/cc/Atropos/project/atropos-c/atropos
 
 # Be more Bourne compatible
 DUALCASE=1; export DUALCASE # for MKS sh

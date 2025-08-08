@@ -1,13 +1,13 @@
 #!/bin/bash
 
-AUTOCANCELDIR=/home/cc/Atropos/project/autocancel-simulation-c/autocancel-simulation
+AUTOCANCELDIR=/home/cc/Atropos/project/atropos-c/atropos
 export LD_LIBRARY_PATH=$AUTOCANCELDIR/build/libs:$LD_LIBRARY_PATH
 
-MYSQL_AUTOCANCEL_PATH=/home/cc/Atropos/project/autocancel-simulation-c/autocancel-mysql
+MYSQL_AUTOCANCEL_PATH=/home/cc/Atropos/project/atropos-c/atropos-mysql
 SYSBENCH_PATH=/home/cc/sysbench-autocancel-master
 USER=cc
-LOG_PATH=/home/cc/autocancel-sosp/logs
-CASE_PATH=/home/cc/autocancel-sosp/cases/mysql-cases/flush-case
+LOG_PATH=/home/cc/logs
+CASE_PATH=/home/cc/Atropos/project/atropos-c/cases/mysql-cases/flush-case
 PREPARE_SCRIPT=$CASE_PATH/../prepare.sh
 
 
@@ -40,7 +40,7 @@ function inter(){
 }
 
 # Run the prepare script
-$PREPARE_SCRIPT
+# $PREPARE_SCRIPT
 
 
 CUR_TIME=$(date +%Y-%m-%d-%H-%M)

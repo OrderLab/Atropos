@@ -2,7 +2,7 @@
 
 set -e
 
-MYSQL_PATH=/home/cc/Atropos/project/autocancel-simulation-c/autocancel-mysql
+MYSQL_PATH=/home/cc/Atropos/project/atropos-c/atropos-mysql
 SYSBENCH_PATH=/home/cc/sysbench-autocancel-master
 SCRIPT_PATH=$(cd "$(dirname "$0")"; pwd)
 
