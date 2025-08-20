@@ -1,14 +1,14 @@
 #!/bin/bash
 
-AUTOCANCELDIR=/home/cc/Atropos/project/autocancel-simulation-c/autocancel-simulation
+AUTOCANCELDIR=/home/cc/Atropos/project/atropos-c/atropos
 export LD_LIBRARY_PATH=$AUTOCANCELDIR/build/libs:$LD_LIBRARY_PATH
 
 POSTGRE_ORIGINAL_PATH=/home/cc/postgres
-POSTGRE_AUTOCANCEL_PATH=/home/cc/Atropos/project/autocancel-simulation-c/autocancel-postgresql
+POSTGRE_AUTOCANCEL_PATH=/home/cc/Atropos/project/atropos-c/atropos-postgresql
 SYSBENCH_PATH=/home/cc/sysbench-autocancel-master
 USER=cc
-LOG_PATH=/home/cc/autocancel-sosp/logs
-CASE_PATH=/home/cc/autocancel-sosp/cases/postgres-case/table-lock-case
+LOG_PATH=/home/cc/logs
+CASE_PATH=/home/cc/Atropos/project/atropos-c/cases/postgres-case/table-lock-case
 PREPARE_SCRIPT=$CASE_PATH/../prepare.sh
 
 
