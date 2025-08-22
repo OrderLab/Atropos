@@ -14,15 +14,15 @@ Follow the instructions below to build autocancel, MySQL, PostgresSQL, Apache an
 ### Build Autocancel
 
 ```shell
-cd autocancel-simulation
+cd ~/Atropos/project/atropos-c/atropos
 mkdir build && cd build
 cmake ..
 make -j $(nproc)
 cd ..
 
 # You could put these in bashrc for convenience
-export AUTOCANCELDIR=$(pwd)/autocancel-simulation
-export LD_LIBRARY_PATH=$(pwd)/autocancel-simulation/build/libs:$LD_LIBRARY_PATH
+export AUTOCANCELDIR=~/Atropos/project/atropos-c/atropos
+export LD_LIBRARY_PATH=~/Atropos/project/atropos-c/atropos/build/libs:$LD_LIBRARY_PATH
 ```
 
 ### Build MySQL
@@ -33,14 +33,14 @@ sudo apt update
 sudo apt install -y build-essential cmake libncurses5-dev libaio-dev \
   bison zlib1g-dev libtirpc-dev libevent-dev openssl pkg-config \
   libssl-dev 
-cd autocancel-mysql
+cd ~/Atropos/project/atropos-c/atropos-mysql
 ./prepare.sh
-export LD_LIBRARY_PATH=$(pwd)/dist/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=~/Atropos/project/atropos-c/atropos-mysql/dist/lib:$LD_LIBRARY_PATH
 ```
 
 ### Build PostgreSQL
 
-Revise `./autocancel-postgresql/configure` to adjust `AUTOCANCELDIR` path to be the path that contains `autocancel-simulation`.
+Revise `./configure` under PostgreSQL folder to adjust `AUTOCANCELDIR` path to be the path that contains `atropos`.
 
 ```shell
 # You may need to install extra packages based on environment
@@ -48,7 +48,7 @@ sudo apt update
 sudo apt install -y build-essential libreadline-dev zlib1g-dev flex bison \
   libssl-dev libxml2-dev libxslt1-dev libpam0g-dev libedit-dev
 
-cd autocancel-postgresql
+cd ~/Atropos/project/atropos-c/atropos-postgresql
 ./configure --prefix=$(pwd)/dist --with-openssl
 make -j4
 make install
@@ -64,7 +64,7 @@ mkdir ./dist/data
 ### Build Apache
 
 ```shell
-cd autocancel-apache
+cd ~/Atropos/project/atropos-c/atropos-apache
 ./compile.sh
 ```
 
@@ -73,6 +73,9 @@ cd autocancel-apache
 ```shell
 sudo apt-get install make automake libtool pkg-config libaio-dev libmysqlclient-dev libssl-dev libpq-dev
 ./autogen.sh
+export $MYSQL_HOME=~/Atropos/project/atropos-c/atropos-mysql/
+export $PGSQL_HOME=~/Atropos/project/atropos-c/atropos-postgresql/
+export $SYSBENCH_HOME=~/Atropos/project/atropos-c/sysbench-atropos
 ./configure --prefix=$SYSBENCH_HOME/dist --with-mysql-includes=$MYSQL_HOME/dist/include/ --with-mysql-libs=$MYSQL_HOME/dist/lib/ --with-mysql --with-pgsql --with-pgsql-includes=$PGSQL_HOME/dist/include/ --with-pgsql-libs=$PGSQL_HOME/dist/lib/
 make -j
 make install
