@@ -11,7 +11,7 @@ We will walk through the setup of each application, autocancel and sysbench. And
 
 Follow the instructions below to build autocancel, MySQL, PostgresSQL, Apache and sysbench. 
 
-### Build Autocancel
+### Build Atropos
 
 ```shell
 cd ~/Atropos/project/atropos-c/atropos
@@ -72,18 +72,19 @@ cd ~/Atropos/project/atropos-c/atropos-apache
 
 ```shell
 sudo apt-get install make automake libtool pkg-config libaio-dev libmysqlclient-dev libssl-dev libpq-dev
+cd ~/Atropos/project/atropos-c/sysbench-atropos
 ./autogen.sh
 export $MYSQL_HOME=~/Atropos/project/atropos-c/atropos-mysql/
 export $PGSQL_HOME=~/Atropos/project/atropos-c/atropos-postgresql/
 export $SYSBENCH_HOME=~/Atropos/project/atropos-c/sysbench-atropos
 ./configure --prefix=$SYSBENCH_HOME/dist --with-mysql-includes=$MYSQL_HOME/dist/include/ --with-mysql-libs=$MYSQL_HOME/dist/lib/ --with-mysql --with-pgsql --with-pgsql-includes=$PGSQL_HOME/dist/include/ --with-pgsql-libs=$PGSQL_HOME/dist/lib/
-make -j
+make -j4
 make install
 ```
 
-### Setup autocancel
+### Setup Atropos
 
-Autocancel requires shared memory hash table (shmht) for multiprocess communication. There are four files needed to create for shmht to work. They are defined at `autocancel-simulation-c/autocancel-simulation/libs/include/shmht.h`
+Atropos requires shared memory hash table (shmht) for multiprocess communication. There are four files needed to create for shmht to work. They are defined at `Atropos-c/Atropos/libs/include/shmht.h`
 
 ```
 #define SHM_PATH "/tmp/map"
@@ -106,18 +107,18 @@ touch /tmp/globLockMapRWLock
 
 ### MySQL Backup Lock Case
 
-Below shows how to run MySQL with autocancel to mitigate resource overload for the backup lock case (case c1 in Table 2 of the paper), where a subtle interaction causes backup queries to hold write locks for a long time.
+Below shows how to run MySQL with Atropos to mitigate resource overload for the backup lock case (case c1 in Table 2 of the paper), where a subtle interaction causes backup queries to hold write locks for a long time.
 
 Navigate to `cases/mysql-cases/flush-case`.
 
-`launch.sh` is a script that automatically runs the sysbench workload in normal, resource overload, and resource overload with autocancel. It will first call `prepare.sh` to prepare the application environment before running the workload.
+`launch.sh` is a script that automatically runs the sysbench workload in normal, resource overload, and resource overload with Atropos. It will first call `prepare.sh` to prepare the application environment before running the workload.
 
 
 Update `AUTOCANCELDIR`, `MYSQL_AUTOCANCEL_PATH`, and `SYSBENCH_PATH` in `launch.sh` and `prepare.sh` if needed. 
 
-#### Resource Overload Without Autocancel
+#### Resource Overload Without Atropos
 
-Invoke the `launch.sh` script with mode `inter` for resource overload without autocancel. It runs an OLTP workload with a large backup query entering around 30 seconds after the workload starts.
+Invoke the `launch.sh` script with mode `inter` for resource overload without Atropos. It runs an OLTP workload with a large backup query entering around 30 seconds after the workload starts.
 
 ```
 ./launch.sh inter
@@ -159,9 +160,9 @@ Below is an example log generated from the workload.
 We can see that the large backup query blocks all read and writes for more than 20 seconds, significantly affecting application performance.
 
 
-#### Resource Overload With Autocancel
+#### Resource Overload With Atropos
 
-Invoke the `launch.sh` script with mode `autocancel` for resource overload with autocancel to see how the resource overload is mitigated.
+Invoke the `launch.sh` script with mode `autocancel` for resource overload with Atropos to see how the resource overload is mitigated.
 
 ```
 ./launch.sh autocancel
@@ -201,12 +202,12 @@ Below is an example log generated from the workload.
 [ 55.0s ] thds: 16 tps: 576.28 qps: 11492.65 (r/w/o: 8032.95/2307.13/1152.57) lat (ms,95%): 87.56 err/s: 0.00 reconn/s: 0.00
 ```
 
-Autocancel is able to cancel the blocking backup request and restore the normal operations in MySQL.
+Atropos is able to cancel the blocking backup request and restore the normal operations in MySQL.
 
-We can also compare the throughput and latency for resource overload without and with autocancel. Throughput is higher and latency is lower for the case with autocancel, showing the effectiveness of the approach.
+We can also compare the throughput and latency for resource overload without and with Atropos. Throughput is higher and latency is lower for the case with Atropos, showing the effectiveness of the approach.
 
 ```
-### Resource Overload w/o Autocancel
+### Resource Overload w/o Atropos
 Throughput:
     events/s (eps):                      373.8742
     time elapsed:                        80.0510s
@@ -221,7 +222,7 @@ Latency (ms):
 ```
 
 ```
-### Resource Overload w/ Autocancel
+### Resource Overload w/ Atropos
 Throughput:
     events/s (eps):                      476.9290
     time elapsed:                        80.0392s
@@ -238,7 +239,7 @@ Latency (ms):
 
 ### PostgreSQL Table Lock Case
 
-Below shows how to run PostgreSQL with autocancel to mitigate resource overload for the table lock case (case c6 in Table 2 of the paper), where a write operation slows down the other query due to MVCC.
+Below shows how to run PostgreSQL with Atropos to mitigate resource overload for the table lock case (case c6 in Table 2 of the paper), where a write operation slows down the other query due to MVCC.
 
 #### Prepare PostgreSQL Original
 The sysbench workload also needs to run on a prepared PostgreSQL environment. The PostgreSQL we've modified has known issues in bootstrapping, so we need to setup PostgreSQL original repo instead. We use version 14.0.
@@ -261,19 +262,19 @@ mkdir ./dist/data
 ```
 
 
-#### Resource Overload Without Autocancel
+#### Resource Overload Without Atropos
 
 Navigate to `cases/postgres-case/table-lock-case`.
 
 
 Update `AUTOCANCELDIR`, `POSTGRE_ORIGINAL_PATH`, `POSTGRE_AUTOCANCEL_PATH`, and `SYSBENCH_PATH` in `launch.sh` and `prepare.sh` if needed. 
 
-Invoke the `launch.sh` script with mode `inter` for resource overload without autocancel and with mode `autocancel` for resource overload with autocancel. It runs an OLTP workload with a large write query entering around 40 seconds after the workload starts.
+Invoke the `launch.sh` script with mode `inter` for resource overload without Atropos and with mode `autocancel` for resource overload with Atropos. It runs an OLTP workload with a large write query entering around 40 seconds after the workload starts.
 
-We can again see from the logs that autocancel is able to cancel the large write query in time so that the application workload resumes quickly.
+We can again see from the logs that Atropos is able to cancel the large write query in time so that the application workload resumes quickly.
 
 ```
-### Resource overload without autocancel
+### Resource overload without Atropos
 [ 41.0s ] thds: 16 tps: 112.56 qps: 2047.93 (r/w/o: 1603.68/219.14/225.11) lat (ms,95%): 4.18 err/s: 0.00 reconn/s: 0.00
 [ 42.0s ] thds: 16 tps: 0.00 qps: 0.00 (r/w/o: 0.00/0.00/0.00) lat (ms,95%): 0.00 err/s: 0.00 reconn/s: 0.00
 [ 43.0s ] thds: 16 tps: 0.00 qps: 0.00 (r/w/o: 0.00/0.00/0.00) lat (ms,95%): 0.00 err/s: 0.00 reconn/s: 0.00
@@ -290,7 +291,7 @@ We can again see from the logs that autocancel is able to cancel the large write
 ```
 
 ```
-### Resource overload with autocancel
+### Resource overload with Atropos
 [ 41.0s ] thds: 16 tps: 21.01 qps: 410.14 (r/w/o: 323.11/45.02/42.01) lat (ms,95%): 2.52 err/s: 0.00 reconn/s: 0.00
 [ 42.0s ] thds: 16 tps: 0.00 qps: 0.00 (r/w/o: 0.00/0.00/0.00) lat (ms,95%): 0.00 err/s: 0.00 reconn/s: 0.00
 [ 43.0s ] thds: 16 tps: 0.00 qps: 0.00 (r/w/o: 0.00/0.00/0.00) lat (ms,95%): 0.00 err/s: 0.00 reconn/s: 0.00
