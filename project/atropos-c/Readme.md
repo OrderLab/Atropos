@@ -21,8 +21,8 @@ make -j $(nproc)
 cd ..
 
 # You could put these in bashrc for convenience
-export AUTOCANCELDIR=~/Atropos/project/atropos-c/atropos
-export LD_LIBRARY_PATH=~/Atropos/project/atropos-c/atropos/build/libs:$LD_LIBRARY_PATH
+echo "AUTOCANCELDIR=$HOME/Atropos/project/atropos-c/atropos" >> ~/.bashrc
+echo "LD_LIBRARY_PATH=$HOME/Atropos/project/atropos-c/atropos/build/libs:$LD_LIBRARY_PATH" >> ~/.bashrc
 ```
 
 ### Build MySQL
@@ -35,7 +35,7 @@ sudo apt install -y build-essential cmake libncurses5-dev libaio-dev \
   libssl-dev 
 cd ~/Atropos/project/atropos-c/atropos-mysql
 ./prepare.sh
-export LD_LIBRARY_PATH=~/Atropos/project/atropos-c/atropos-mysql/dist/lib:$LD_LIBRARY_PATH
+echo "LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Atropos/project/atropos-c/atropos-mysql/dist/lib" >> ~/.bashrc
 ```
 
 ### Build PostgreSQL
@@ -74,9 +74,9 @@ cd ~/Atropos/project/atropos-c/atropos-apache
 sudo apt-get install make automake libtool pkg-config libaio-dev libmysqlclient-dev libssl-dev libpq-dev
 cd ~/Atropos/project/atropos-c/sysbench-atropos
 ./autogen.sh
-export $MYSQL_HOME=~/Atropos/project/atropos-c/atropos-mysql/
-export $PGSQL_HOME=~/Atropos/project/atropos-c/atropos-postgresql/
-export $SYSBENCH_HOME=~/Atropos/project/atropos-c/sysbench-atropos
+echo "$MYSQL_HOME=$HOME/Atropos/project/atropos-c/atropos-mysql" >> ~/.bashrc
+echo "$PGSQL_HOME=$HOME/Atropos/project/atropos-c/atropos-postgresql" >> ~/.bashrc
+echo "$SYSBENCH_HOME=~/Atropos/project/atropos-c/sysbench-atropos" >> ~/.bashrc
 ./configure --prefix=$SYSBENCH_HOME/dist --with-mysql-includes=$MYSQL_HOME/dist/include/ --with-mysql-libs=$MYSQL_HOME/dist/lib/ --with-mysql --with-pgsql --with-pgsql-includes=$PGSQL_HOME/dist/include/ --with-pgsql-libs=$PGSQL_HOME/dist/lib/
 make -j4
 make install
@@ -245,9 +245,11 @@ Below shows how to run PostgreSQL with Atropos to mitigate resource overload for
 The sysbench workload also needs to run on a prepared PostgreSQL environment. The PostgreSQL we've modified has known issues in bootstrapping, so we need to setup PostgreSQL original repo instead. We use version 14.0.
 
 ```
+cd /home/cc/
 git clone https://github.com/postgres/postgres
 git checkout REL_14_0
 
+cd postgres
 ./configure --prefix=$(pwd)/dist --with-openssl
 make -j4
 make install
@@ -269,7 +271,7 @@ Navigate to `cases/postgres-case/table-lock-case`.
 
 Update `AUTOCANCELDIR`, `POSTGRE_ORIGINAL_PATH`, `POSTGRE_AUTOCANCEL_PATH`, and `SYSBENCH_PATH` in `launch.sh` and `prepare.sh` if needed. 
 
-Invoke the `launch.sh` script with mode `inter` for resource overload without Atropos and with mode `autocancel` for resource overload with Atropos. It runs an OLTP workload with a large write query entering around 40 seconds after the workload starts.
+Invoke the `launch.sh` script with mode `inter` for resource overload without Atropos and with mode `atropos` for resource overload with Atropos. It runs an OLTP workload with a large write query entering around 40 seconds after the workload starts.
 
 We can again see from the logs that Atropos is able to cancel the large write query in time so that the application workload resumes quickly.
 
