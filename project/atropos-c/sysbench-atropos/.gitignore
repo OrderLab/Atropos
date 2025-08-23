@@ -86,4 +86,4 @@ prime
 stage
 *.snap
 /snap/snapcraft.yaml
-/dist/
+/dist

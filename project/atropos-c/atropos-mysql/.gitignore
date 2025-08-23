@@ -42,3 +42,4 @@ CMakeScripts
 cmake_install.cmake
 CTestTestfile.cmake
 _deps
+dist/

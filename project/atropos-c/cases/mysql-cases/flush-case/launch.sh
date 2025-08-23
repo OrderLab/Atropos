@@ -4,7 +4,6 @@ AUTOCANCELDIR=/home/cc/Atropos/project/atropos-c/atropos
 export LD_LIBRARY_PATH=$AUTOCANCELDIR/build/libs:$LD_LIBRARY_PATH
 
 MYSQL_AUTOCANCEL_PATH=/home/cc/Atropos/project/atropos-c/atropos-mysql
-SYSBENCH_PATH=/home/cc/sysbench-autocancel-master
 USER=cc
 LOG_PATH=/home/cc/logs
 CASE_PATH=/home/cc/Atropos/project/atropos-c/cases/mysql-cases/flush-case
@@ -45,6 +44,8 @@ function inter(){
 
 CUR_TIME=$(date +%Y-%m-%d-%H-%M)
 LOG_PATH=$LOG_PATH/$CUR_TIME-mysql-flush-case-$1
+
+
 mkdir -p $LOG_PATH
 
 # normal or inter or autocancel or error out
