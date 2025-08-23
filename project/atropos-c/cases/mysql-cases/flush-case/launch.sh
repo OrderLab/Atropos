@@ -2,9 +2,8 @@
 
 AUTOCANCELDIR=/home/cc/Atropos/project/atropos-c/atropos
 export LD_LIBRARY_PATH=$AUTOCANCELDIR/build/libs:$LD_LIBRARY_PATH
-
+SYSBENCH_PATH=/home/cc/Atropos/project/atropos-c/sysbench-atropos
 MYSQL_AUTOCANCEL_PATH=/home/cc/Atropos/project/atropos-c/atropos-mysql
-SYSBENCH_PATH=/home/cc/sysbench-autocancel-master
 USER=cc
 LOG_PATH=/home/cc/logs
 CASE_PATH=/home/cc/Atropos/project/atropos-c/cases/mysql-cases/flush-case
@@ -40,11 +39,13 @@ function inter(){
 }
 
 # Run the prepare script
-# $PREPARE_SCRIPT
+#$PREPARE_SCRIPT
 
 
 CUR_TIME=$(date +%Y-%m-%d-%H-%M)
 LOG_PATH=$LOG_PATH/$CUR_TIME-mysql-flush-case-$1
+
+
 mkdir -p $LOG_PATH
 
 # normal or inter or autocancel or error out
@@ -53,17 +54,17 @@ if [ $1 == "normal" ]; then
     MYSQL_PATH=$MYSQL_AUTOCANCEL_PATH
 elif [ $1 == "inter" ]; then
     FUNCTION=inter
-    export AUTOCANCEL_CRASH=$LOG_PATH/autocancel-log
+    export AUTOCANCEL_CRASH=$LOG_PATH/inter-log
     MYSQL_PATH=$MYSQL_AUTOCANCEL_PATH
-elif [ $1 == "autocancel" ]; then
+elif [ $1 == "atropos" ]; then
     FUNCTION=inter
     MYSQL_PATH=$MYSQL_AUTOCANCEL_PATH
     export SHOULD_KILL=1
     export AUTOCANCEL_POLICY=2
     export AUTOCANCEL_PORTION=0.8
-    export AUTOCANCEL_CRASH=$LOG_PATH/autocancel-log
+    export AUTOCANCEL_CRASH=$LOG_PATH/atropos-log
 else
-    echo "error, please input normal or inter or autocancel"
+    echo "error, please input normal or inter or atropos"
     exit 1
 fi
 
