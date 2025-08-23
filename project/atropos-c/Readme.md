@@ -21,7 +21,7 @@ make -j $(nproc)
 cd ..
 
 # You could put these in bashrc for convenience
-echo "AUTOCANCELDIR=$HOME/Atropos/project/atropos-c/atropos" >> ~/.bashrc
+echo "export AUTOCANCELDIR=$HOME/Atropos/project/atropos-c/atropos" >> ~/.bashrc
 echo "LD_LIBRARY_PATH=$HOME/Atropos/project/atropos-c/atropos/build/libs:$LD_LIBRARY_PATH" >> ~/.bashrc
 ```
 
@@ -35,7 +35,7 @@ sudo apt install -y build-essential cmake libncurses5-dev libaio-dev \
   libssl-dev 
 cd ~/Atropos/project/atropos-c/atropos-mysql
 ./prepare.sh
-echo "LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Atropos/project/atropos-c/atropos-mysql/dist/lib" >> ~/.bashrc
+echo "LD_LIBRARY_PATH=$LD_LIBRARY_PATH$HOME/Atropos/project/atropos-c/atropos-mysql/dist/lib:" >> ~/.bashrc
 ```
 
 ### Build PostgreSQL
@@ -74,9 +74,9 @@ cd ~/Atropos/project/atropos-c/atropos-apache
 sudo apt-get install make automake libtool pkg-config libaio-dev libmysqlclient-dev libssl-dev libpq-dev
 cd ~/Atropos/project/atropos-c/sysbench-atropos
 ./autogen.sh
-echo "$MYSQL_HOME=$HOME/Atropos/project/atropos-c/atropos-mysql" >> ~/.bashrc
-echo "$PGSQL_HOME=$HOME/Atropos/project/atropos-c/atropos-postgresql" >> ~/.bashrc
-echo "$SYSBENCH_HOME=~/Atropos/project/atropos-c/sysbench-atropos" >> ~/.bashrc
+echo "export MYSQL_HOME=$HOME/Atropos/project/atropos-c/atropos-mysql" >> ~/.bashrc
+echo "export PGSQL_HOME=$HOME/Atropos/project/atropos-c/atropos-postgresql" >> ~/.bashrc
+echo "export SYSBENCH_HOME=$HOME/Atropos/project/atropos-c/sysbench-atropos" >> ~/.bashrc
 ./configure --prefix=$SYSBENCH_HOME/dist --with-mysql-includes=$MYSQL_HOME/dist/include/ --with-mysql-libs=$MYSQL_HOME/dist/lib/ --with-mysql --with-pgsql --with-pgsql-includes=$PGSQL_HOME/dist/include/ --with-pgsql-libs=$PGSQL_HOME/dist/lib/
 make -j4
 make install
@@ -162,10 +162,10 @@ We can see that the large backup query blocks all read and writes for more than 
 
 #### Resource Overload With Atropos
 
-Invoke the `launch.sh` script with mode `autocancel` for resource overload with Atropos to see how the resource overload is mitigated.
+Invoke the `launch.sh` script with mode `atropos` for resource overload with Atropos to see how the resource overload is mitigated.
 
 ```
-./launch.sh autocancel
+./launch.sh atropos
 ```
 
 Below is an example log generated from the workload.
