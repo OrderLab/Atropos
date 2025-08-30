@@ -1,0 +1,36 @@
+version: '3'
+services:
+  single_node:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.9.0-SNAPSHOT
+    # stdin_open: true
+    # tty: true
+    # entrypoint: ["bash"]
+    container_name: single_node
+    restart: always
+    networks: 
+      - elastic
+    volumes:
+      - $AUTOCANCEL_HOME/elasticsearch/build/distribution/local/elasticsearch-8.9.0-SNAPSHOT:/usr/share/elasticsearch
+      - $AUTOCANCEL_HOME/scripts/data/elasticsearch:/usr/share/elasticsearch/data
+      - $AUTOCANCEL_HOME/scripts/cases/${CASE_DIR}/es_config.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - $AUTOCANCEL_HOME/autocancel_exp/elasticsearch_exp/cluster/config/java.policy:/usr/share/elasticsearch/config/java.policy
+      - $AUTOCANCEL_HOME/autocancel_exp/elasticsearch_exp/cluster/log/single_node:/usr/share/elasticsearch/logs
+      - $AUTOCANCEL_HOME/scripts/logs/$START_DATE/${BASELINE}_${START_TIME}:/tmp/autocancel
+      # - $AUTOCANCEL_HOME/autocancel_exp/elasticsearch_exp/cluster/config/log4j2.properties:/usr/share/elasticsearch/config/log4j2.properties
+    environment:
+      - TZ=Asia/Shanghai
+      - "ES_JAVA_OPTS=-Xms${HEAP_SIZE}g -Xmx${HEAP_SIZE}g -ea:autocancel... -Djava.security.policy=/usr/share/elasticsearch/config/java.policy -Dautocancel.app=elasticsearch -Dcancel.enable=false -Dautocancel.log=$AUTOCANCEL_LOG -Dautocancel.start=true -XX:InitiatingHeapOccupancyPercent=10 -agentpath:/usr/share/elasticsearch/data/liblagent.so"
+    ports:
+      - 9200:9200/tcp
+    deploy:
+      resources:
+        limits:
+          cpus: "$CORE_NUM"
+    user: "$USER_ID:$GROUP_ID"
+    # blkio_config:
+    #   device_read_bps:
+    #     - path: /dev/sda
+    #       rate: '12mb'
+
+networks:
+  elastic: 

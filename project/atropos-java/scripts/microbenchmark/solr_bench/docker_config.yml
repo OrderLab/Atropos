@@ -1,0 +1,38 @@
+version: '3'
+services:
+  single_node:
+    image: solr_exp:v1.0-9.0.0
+    # stdin_open: true
+    # tty: true
+    # entrypoint: ["bash"]
+    container_name: single_node
+    restart: always
+    entrypoint: ./bin/solr start -c -f -V
+    networks: 
+      - solr
+    volumes:
+      - $AUTOCANCEL_HOME/solr/solr/packaging/build/solr-9.0.0-SNAPSHOT:/opt/solr-9.0.0:rwx
+      - $AUTOCANCEL_HOME/scripts/data/solr_bench:/var/solr/data:rw
+      - $AUTOCANCEL_HOME/autocancel_exp/solr_exp/cluster/log/single_node:/var/solr/logs:rw
+      - $AUTOCANCEL_HOME/scripts/microbenchmark/solr_bench/solr_config.xml:/var/solr/data/solr.xml:rw
+      - $AUTOCANCEL_HOME/solr/solr/packaging/build/solr-9.0.0-SNAPSHOT/server/resources/log4j2.xml:/var/solr/log4j2.xml:rw
+      - $AUTOCANCEL_HOME/scripts/logs/$START_DATE/${MICROBENCHMARK}_${START_TIME}:/tmp/autocancel
+    environment:
+      - TZ=Asia/Shanghai
+      - "SOLR_JAVA_MEM=-Xms16g -Xmx16g"
+      - "SOLR_HOME=/var/solr/data"
+      - "SOLR_OPTS=-Dautocancel.app=solr -Ddefault.policy=$DEFAULT_POLICY -Dpredict.progress=$PREDICT_PROGRESS -Dcancel.enable=$CANCEL_ENABLE -Dautocancel.log=$AUTOCANCEL_LOG -Dautocancel.start=$AUTOCANCEL_START"
+    ports:
+      - 8983:8983/tcp
+    deploy:
+      resources:
+        limits:
+          cpus: '8.00'
+          # memory: '2G'
+    # blkio_config:
+    #   device_read_bps:
+    #     - path: /dev/sda
+    #       rate: '12mb'
+
+networks:
+  solr: 

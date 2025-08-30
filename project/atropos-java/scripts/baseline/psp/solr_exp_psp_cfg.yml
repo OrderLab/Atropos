@@ -1,0 +1,31 @@
+cpus:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+log_dir: /tmpfs/experiments/
+listen:
+  ip: 0.0.0.0
+  port: 8983
+target:
+  ip: 127.0.0.1
+  port: 18983
+n_resas: 3
+net_workers:
+  number: 1
+dp: DARC
+requests:
+- type: SEARCH
+- type: MSEARCH
+- type: DOC
+- type: UPDATE_BY_QUERY
+- type: UPDATE
+- type: BULK
+- type: QUERY
+workers:
+  number: 6
+  type: APP

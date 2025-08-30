@@ -1,4 +1,24 @@
-[submodule "project/atropos-java"]
-	path = project/atropos-java
-	url = git@github.com:easonycliu/AutoCancelProject.git
-	branch = master
+[submodule "autocancel_exp"]
+	path = project/atropos-java/autocancel_exp
+	url = git@github.com:liuyc1515/AutoCancelExperiment.git
+    branch = experiment
+[submodule "autocancel_java_code"]
+	path = project/atropos-java/autocancel_java_code
+	url = git@github.com:liuyc1515/AutoCancelJavaLib.git
+    branch = experiment
+[submodule "elasticsearch"]
+	path = project/atropos-java/elasticsearch
+	url = git@github.com:liuyc1515/elasticsearch.git
+    branch = autocancel
+[submodule "solr"]
+	path = project/atropos-java/solr
+	url = git@github.com:liuyc1515/solr.git
+    branch = autocancel
+[submodule "psp"]
+	path = project/atropos-java/scripts/baseline/psp/psp_src
+	url = git@github.com:liuyc1515/AutoCancelPsp.git
+    branch = autocancel
+[submodule "psandbox"]
+	path = project/atropos-java/scripts/baseline/psandbox/toy_sandbox
+	url = git@github.com:liuyc1515/AutoCancelToySandbox.git
+    branch = autocancel

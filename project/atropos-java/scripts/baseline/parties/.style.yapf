@@ -1,0 +1,6 @@
+[style]
+based_on_style = google
+use_tabs = true
+dedent_closing_brackets = true
+continuation_align_style = valign-right
+column_limit = 80
