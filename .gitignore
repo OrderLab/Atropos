@@ -32,3 +32,5 @@ __pycache__
 /project/atropos-java/PARTIES
 /project/atropos-java/psp
 /project/atropos-java/toy_sandbox
+
+/project/atropos-go/*.zip
