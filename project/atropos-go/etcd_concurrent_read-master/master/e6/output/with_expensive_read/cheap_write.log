@@ -1,0 +1,35 @@
+ 0 / 100 B                                                                                                                                                                                             !   0.00%INFO: 2023/06/10 03:22:15 ccResolverWrapper: sending new addresses to cc: [{localhost:2379 0  <nil>}]
+INFO: 2023/06/10 03:22:15 balancerWrapper: got update addr from Notify: [{localhost:2379 <nil>}]
+INFO: 2023/06/10 03:22:15 balancerWrapper: got update addr from Notify: [{localhost:2379 <nil>}]
+ 4 / 100 Booooooom                                                                                                                                                                              !   4.00% 00m04s 8 / 100 Boooooooooooooom                                                                                                                                                                       !   8.00% 00m04s 12 / 100 Booooooooooooooooooooom                                                                                                                                                               !  12.00% 00m04s 16 / 100 Boooooooooooooooooooooooooooom                                                                                                                                                        !  16.00% 00m04s 20 / 100 Boooooooooooooooooooooooooooooooooooom                                                                                                                                                !  20.00% 00m04s 24 / 100 Booooooooooooooooooooooooooooooooooooooooooom                                                                                                                                         !  24.00% 00m03s 28 / 100 Boooooooooooooooooooooooooooooooooooooooooooooooooom                                                                                                                                  !  28.00% 00m03s 32 / 100 Booooooooooooooooooooooooooooooooooooooooooooooooooooooooom                                                                                                                           !  32.00% 00m03s 36 / 100 Booooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooom                                                                                                                   !  36.00% 00m03s 40 / 100 Boooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooom                                                                                                            !  40.00% 00m03s 44 / 100 Booooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooom                                                                                                     !  44.00% 00m02s 48 / 100 Boooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooom                                                                                              !  48.00% 00m02s 52 / 100 Boooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooom                                                                                      !  52.00% 00m02s 56 / 100 Booooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooom                                                                               !  56.00% 00m02s 60 / 100 Boooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooom                                                                        !  60.00% 00m02s 65 / 100 Booooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooom                                                               !  65.00% 00m01s 69 / 100 Boooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooom                                                        !  69.00% 00m01s 72 / 100 Boooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooom                                                  !  72.00% 00m01s 77 / 100 Booooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooom                                         !  77.00% 00m01s 81 / 100 Boooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooom                                   !  81.00% 85 / 100 Booooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooom                            !  85.00% 89 / 100 Booooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooom                    !  89.00% 93 / 100 Boooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooom             !  93.00% 97 / 100 Boooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooom     !  97.00% 100 / 100 Boooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo! 100.00% 4s
+
+Summary:
+  Total:	4.9615 secs.
+  Slowest:	0.0594 secs.
+  Fastest:	0.0003 secs.
+  Average:	0.0017 secs.
+  Stddev:	0.0063 secs.
+  Requests/sec:	20.1552
+
+Response time histogram:
+  0.0003 [1]	|
+  0.0062 [95]	|∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎
+  0.0121 [2]	|
+  0.0180 [0]	|
+  0.0239 [1]	|
+  0.0299 [0]	|
+  0.0358 [0]	|
+  0.0417 [0]	|
+  0.0476 [0]	|
+  0.0535 [0]	|
+  0.0594 [1]	|
+
+Latency distribution:
+  10% in 0.0004 secs.
+  25% in 0.0005 secs.
+  50% in 0.0005 secs.
+  75% in 0.0007 secs.
+  90% in 0.0012 secs.
+  95% in 0.0060 secs.
+  99% in 0.0594 secs.
+

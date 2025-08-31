@@ -1,0 +1,34 @@
+bench with linearizable range
+2023/07/03 11:08:10 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to READY
+2023/07/03 11:08:10 INFO: [roundrobin] roundrobinPicker: Build called with info: {map[0xc0005a2000:{{
+  "Addr": "localhost:2379",
+  "ServerName": "localhost",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}}]}
+2023/07/03 11:08:10 INFO: [core] [Channel #1] Channel Connectivity change to READY
+1 / 1 [-------------------------------------------------------------------------------------------------------------------------------------------------------------------] 100.00% ? p/s
+Summary:
+  Total:	0.0009 secs.
+  Slowest:	0.0008 secs.
+  Fastest:	0.0008 secs.
+  Average:	0.0008 secs.
+  Stddev:	0.0000 secs.
+  Requests/sec:	1153.9349
+
+Response time histogram:
+  0.0008 [1]	|∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎
+  0.0008 [0]	|
+  0.0008 [0]	|
+  0.0008 [0]	|
+  0.0008 [0]	|
+  0.0008 [0]	|
+  0.0008 [0]	|
+  0.0008 [0]	|
+  0.0008 [0]	|
+  0.0008 [0]	|
+  0.0008 [0]	|
+
+Latency distribution:
