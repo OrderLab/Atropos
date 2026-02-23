@@ -96,13 +96,19 @@ For the most reliable evaluation experience, we recommend using our pre-configur
 If you use this artifact in your research, please cite our paper:
 
 ```bibtex
-@inproceedings{atropos2025,
-  title={Atropos: A Library for Mitigating Application Resource Overload},
-  author={[Authors]},
-  booktitle={Proceedings of the 30th ACM Symposium on Operating Systems Principles},
-  series={SOSP '25},
-  year={2025},
-  publisher={ACM}
+@inproceedings{Atropos2025,
+  title = {Mitigating Application Resource Overload with Targeted Task Cancellation},
+  author = {Hu, Yigong and Zhang, Zeyin and Liu, Yicheng and Gu, Yile and Lei, Shuangyu and Kasikci, Baris and Huang, Peng},
+  booktitle = {Proceedings of the ACM SIGOPS 31st Symposium on Operating Systems Principles},
+  series = {SOSP '25},
+  year = {2025},
+  isbn = {9798400718700},
+  publisher = {Association for Computing Machinery},
+  url = {https://doi.org/10.1145/3731569.3764835},
+  doi = {10.1145/3731569.3764835},
+  pages = {270–285},
+  numpages = {16},
+  location = {Lotte Hotel World, Seoul, Republic of Korea}
 }
 ```
 
